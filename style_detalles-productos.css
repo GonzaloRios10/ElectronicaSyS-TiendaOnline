@@ -1,0 +1,118 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: rgb(236, 240, 241);
+}
+
+/*----------------------------Productos------------------------------*/
+
+#container-article {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    margin-top: 1%;
+    height: auto;
+    padding: 20px;
+    background: rgb(236, 240, 241);
+/*    border: 1px solid black;*/
+}
+
+#box-img-article {
+    width: 60vh;
+    height: 60vh;
+    margin-left: 3%;
+    margin-top: auto;
+    margin-bottom: auto;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+/*    border: 1px solid black;*/
+}
+
+#box-img-article img {
+    width: 100%;
+    height: 100%;
+}
+
+#box-details-article {
+    width: 30%;
+    height: auto;
+    text-align: center;
+    margin-left: 5%;
+    border: 1px solid;
+    border-color: rgb(181, 178, 178);
+    border-radius: 2%;
+}
+
+#title {
+    margin-top: 25px; 
+}
+
+#description {
+    text-align: justify;
+    padding: 20px;
+}
+
+#especifications {
+    padding-left: 20px;
+    text-align: left;
+}
+
+#stock {
+
+    padding-left: 20px;
+    text-align: left;
+}
+
+#price {
+    margin-top: 25px; 
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.carrito {
+    display: block;
+    width: 90%;
+    height: 50px;
+    background: rgb(26, 115, 232);
+    color: rgb(254, 254, 254);
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.btn-wsp {
+    position: fixed;
+    width: 35px;
+    height: 60px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    background: #25d366;
+    color: #fff;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    transition: all 300ms ease;
+}
+
+.btn-wsp i {
+/*    border: 1px solid black;*/
+    margin-left: 18px;
+    margin-top: 13px;
+}
+
+.btn-wsp:hover {
+    background: #fff;
+    color: #0df053;
+}

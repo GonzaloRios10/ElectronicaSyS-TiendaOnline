@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+	background: rgb(229, 231, 233);
+	font-family: sans-serif;
+}
+
+/*----------------------------Tabla de productos------------------------------*/
+
+.row {
+	width: 100%;
+	height: 100%;
+}
+
+.row-box {
+	margin-top: 30px;
+}
+
+.row-box-table {
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgb(254, 254, 254);
+	width: 95%;
+	height: 100%;
+	text-align: center;
+	border-collapse: collapse;
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+}
+
+.accion {
+	font-size: 25px;
+	color: rgb(0, 0, 0);
+}
+
+.accion i {
+	position: relative;
+	left: 18px;
+}
+
+tr, th {
+	padding: 10px;
+}
+
+tbody, tr, td {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+thead {
+	background: #174275;
+	color: rgb(254, 254, 254);
+}
+
+#boton-consultar_productos {
+	background: rgb(26, 115, 232);
+	color: rgb(255, 255, 255);
+	padding: 10px;
+	width: 5%;
+	border: none;
+	border-radius: 5px;
+}
+
+#boton-consultar_productos:hover {
+	background: rgb(41, 101, 179);
+}
+
+form input {
+	width: 30%;
+	padding: 10px;
+	border: none;
+}
+
+form input:focus {
+	outline-color: dodgerBlue;
+}
+
+#boton_registrar {
+	background: rgb(26, 115, 232);
+	color: rgb(255, 255, 255);
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 10px;
+	width: auto;
+	border: none;
+	border-radius: 6px;
+}
+
+#boton_registrar:hover {
+	background: rgb(41, 101, 179);
+}
+
+/*----------------------------Botones------------------------------*/
+
+.row-botones {
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+
+.botones-color {
+    display: flex;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    padding-left: 25px;
+}
+
+.botones-color li {
+    list-style: none;
+}
+
+.botones-color li a {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.botones-color li a:hover {
+	font-size: 25px;
+}

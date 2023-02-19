@@ -1,0 +1,68 @@
+/*----------------------------Footer------------------------------*/
+
+.footer {
+    width: auto;
+    height: auto;
+    background: #174275;
+    color: rgb(255, 255, 255);
+    padding-top: 20px;
+}
+
+.boton_contact {
+    background: rgb(26, 115, 232);
+    color: rgb(255, 255, 255);
+    margin-left: 5px;
+    margin-top: 10px;
+    padding: 10px;
+    width: 45%;
+    border: none;
+    border-radius: 6px;
+}
+
+.boton_contact:hover {
+    background: rgb(41, 101, 179);
+}
+
+.group-1 {
+    width: auto;
+    height: auto;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#logo_sys2 {
+    width: 150px;
+}
+
+.box-2 {
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+.redes {
+    padding-left: 45px;
+    margin-top: 15px;
+}
+
+.redes-icon i {
+    font-size: 35px;
+}
+
+.redes-icon i:hover {
+    color: rgb(220, 220, 220);
+}
+
+.group-2 {
+    width: auto;
+    height: 55px;
+    padding-top: 20px;
+    background: #314c6e;
+    text-align: center;    
+}
+
+h1 {
+    padding-left: 10px;
+}

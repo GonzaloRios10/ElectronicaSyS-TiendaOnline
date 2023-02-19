@@ -1,0 +1,69 @@
+Listar las ventas realizadas a cliente X...
+Listar los articulos comprados por el cliente X...
+Listar los productos y ordenarlos por proveedor
+Listar los clientes de la provincia de Misiones
+Listar los productos de la categoria X...
+
+
+
+1- Listar las ventas realizadas al cliente Isidro Gomez
+SELECT idVentas, Total, Fecha, Nombre, Apellido FROM ventas vent 
+INNER JOIN clientes clie
+ON vent.Clientes_idClientes = clie.idClientes 
+WHERE clie.Nombre = 'Isidro' AND clie.Apellido = 'Gomez';
+
+2- Listar los articulos comprados por el cliente Isidro Gomez
+SELECT idDetalles_ventas, Ventas_idVentas, Titulo, Nombre, Fecha FROM detalles_ventas det_vent
+INNER JOIN ventas vent ON det_vent.Ventas_idVentas = vent.idVentas
+INNER JOIN productos prod ON det_vent.Productos_idProductos = prod.idProductos
+INNER JOIN clientes clien ON clien.idClientes = vent.Clientes_idClientes
+WHERE clien.Nombre = "Isidro" AND clien.Apellido = 'Gomez';
+
+3- Listar los productos y ordenarlos por proveedor
+SELECT * FROM proveedores_productos prov_prod 
+INNER JOIN proveedores prov ON prov_prod.Proveedores_idProveedores = prov.idProveedores
+INNER JOIN productos prod ON prov_prod.Productos_idProductos = prod.idProductos
+ORDER BY Nombre ASC;
+
+4- Listar los productos de la categoria telefonos
+SELECT Titulo, Tipo FROM productos pro 
+INNER JOIN categorias_productos cat ON pro.Categorias_Productos_idCategorias_productos = cat.idCategorias_productos
+WHERE cat.Tipo = 'Telefonos';
+
+5- Listar los clientes de la provincia de Misiones
+SELECT Nombre, Apellido, Localidad, Desc_provincia FROM clientes clien
+INNER JOIN localidades loca ON clien.Localidades_idLocalidades = loca.idLocalidades
+INNER JOIN codigo_postal cp ON loca.Codigo_Postal_idCodigo_Postal = cp.idCodigo_Postal
+INNER JOIN provincias provin ON loca.Provincias_idProvincias = provin.idProvincias
+WHERE provin.Desc_provincia = 'Misiones';
+
+6- Listar los clientes que tienen el rol usuario común
+SELECT Usuario, Descripcion FROM clientes clien
+INNER JOIN categorias_usuarios cat
+ON clien.Categorias_usuarios_idCategorias_usuarios = cat.idCategorias_usuarios
+WHERE cat.Descripcion = 'Común/Cliente';
+
+7- Listar las compras realizadas al proveedor Phillips Compañia
+SELECT idCompras, Nombre, Total FROM compras comp
+INNER JOIN proveedores prov
+ON comp.Proveedores_idProveedores = prov.idProveedores
+WHERE prov.Nombre = 'Phillips Compañia';
+
+8- Sumar las ventas de agosto a noviembre
+SELECT SUM(Total) AS Suma_Total FROM ventas
+WHERE Fecha BETWEEN '2022-08-01' AND '2022-11-31';
+
+9- Sumar las ventas de la categoria Tablet
+SELECT Tipo, SUM(Subtotal) AS Suma_Total FROM detalles_ventas det_v
+INNER JOIN ventas v 
+ON det_v.Ventas_idVentas = v.idVentas
+INNER JOIN productos p 
+ON det_v.Productos_idProductos = p.idProductos
+INNER JOIN categorias_productos cat
+ON p.Categorias_Productos_idCategorias_productos = cat.idCategorias_productos
+WHERE cat.Tipo = 'Tablets';
+
+10- Listar las ventas realizadas al cliente Rodrigo Perez
+SELECT idVentas, Total, Fecha, Nombre, Apellido FROM ventas vent INNER JOIN clientes clie
+ON vent.Clientes_idClientes = clie.idClientes 
+WHERE clie.Nombre = 'Rodrigo' AND clie.Apellido = 'Perez';
